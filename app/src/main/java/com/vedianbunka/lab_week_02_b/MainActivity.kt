@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val submitButton : Button get() = findViewById(R.id.submit_button)
 
     private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-            activityResult ->
+        activityResult ->
         val data = activityResult.data
         val error = data?.getBooleanExtra(ERROR_KEY, false)
         if(error == true){
